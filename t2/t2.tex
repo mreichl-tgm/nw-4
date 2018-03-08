@@ -1,0 +1,165 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+\usepackage{mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[marginal, norule, perpage]{footmisc}
+
+\renewcommand{\thefootnote}{\Roman{footnote}}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MidnightBlue,
+  urlcolor=MidnightBlue
+}
+
+%opening
+\title{Physik Zusammenfassung\\	\large{Jahrgang 4 - Semester 1 - Test 2}}
+\author{Markus Reichl}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Wärmeübertragung}
+\subsection{Arten der Wärmeübertragung}
+\subsubsection{Wärmeleitung}
+Wärmetransport durch Zusammenstoß (Bewegung) der Moleküle.
+\subsubsection{Wärmeströmung}
+Erfolgt in Flüssigkeiten und Gasen. Der Wärmetransport tritt in Zusammenhang mit einem Messetransport auf. (Bsp.: Zentralheizung)
+\subsubsection{Wärmestrahlung}
+Ausbreitung der Wärmeenergie von der Sonne zur Erde. (Der menschliche Körper strahl ca. 100 Watt ab)
+\subsubsection{Bsp.: Thermoskanne}
+Die Hülle der Kanne verringert den Luftdruck, dadurch werden die Wärmeleitung und die Wärmeströmung behindert.
+Die Innenseite der Hülle ist verspiegelt, wodurch die Wärmestrahlung verhindert wird.
+
+\subsection{Wärmeleitzahl $\lambda$}
+Die Wärmeleitzahl $\lambda$ gibt an welcher Wärmestrom in Watt ständig durch eine 1$m^2$ große und 1m dicke Schicht eines Stoffes hindurchgeht, wenn $\Delta$T 1C$^\circ$ beträgt.
+
+\subsection{Wärmedurchlasswiderstand D}
+Der Wärmedurchlasswiderstand D ist in $\frac{m^2 K}{W}$ angegeben und wie folgt definiert:
+$$D = \frac{d}{\lambda}$$
+$$D = \sum \frac{d_i}{\lambda_i}$$
+d ... Dichte\\
+$\lambda$ ... Wärmeleitzahl
+
+\subsection{Wärmedurchgangskoeffizient U}
+Der Wärmedurchgangskoeffizient U ist in $\frac{W}{m^2 K}$ angegeben und wie folgt definiert:
+$$U = \frac{1}{\frac{1}{\alpha_a} + \frac{1}{\alpha_i} + D}$$
+$\frac{1}{\alpha}$ ... Übergangswiderstand\\
+D ... Wärmedurchlasswiderstand
+
+\subsection{Wärmeausdehnung}
+\subsubsection{Bsp.: Wärmeausdehnung am Beispiel Wand}
+Angegeben sind diverse Eigenschaften eines Objekts und gesucht wird der Wärmedurchgangskoeffizient.
+
+Die Wand hat einen Außenputz von 1.5cm und eine Wärmeleitzahl $\lambda = 0.8 \frac{W}{m K}$. Der Verputz stellt einen Widerstand von $\alpha = 0.015m$ dar, welcher in die Formel für den Durchlasswiderstand D eingesetzt werden kann.
+$$\frac{\alpha}{\lambda} = D = \frac{0.015}{0.8} \approx 0.018\frac{m^2 K}{W}$$
+Die Wand besteht aus Hochziegeln mit $\lambda = 0.33\frac{W}{m K}$ und einer Dicke von 38cm. Hierzu dieselbe Rechnung.
+$$D = \frac{0.38}{0.33} \approx 1.15\frac{m^2 K}{W}$$
+
+Die Innenwand entspricht vom Aufbau der Außenwand daher gilt für diese auch $D \approx 0.018\frac{m^2 K}{W}$.
+
+Der Gesamtwärmewiderstand entspricht der Summe aller Teilwiderstände.
+$$D = \sum D_i = 1.21\frac{m^2 K}{W}$$
+
+Damit kann in die Formel für den Wärmedurchgangskoeffizienten eingesetzt werden.
+$$U = \frac{1}{\frac{1}{\alpha_a} + \frac{1}{\alpha_i} + D}$$
+$$U = \frac{1}{0.18 + 1.21} \approx 0.73\frac{W}{m^2 K}$$
+
+\subsubsection{Bsp.: Wärmeausdehnung am Beispiel Haus}
+Das gleiche Prinzip wie im vorangegangenen Abschnitt kann auch auf größe Objekte angewandt werden.
+
+Als Beispiel liegt ein Haus mit einer Grundfläche von 132$m^2$ vor. Die Außenwände haben eine Gesamtfläche von 128$m^2$ und einen Wärmedurchgangskoeffizienten von 0.7$\frac{W}{m^2 K}$. 
+Die Decke, der Fußboden, sowie der Keller sind unbeheizt und haben jeweils einen Wärmedurchgangskoeffizienten von $1.1\frac{W}{m^2 K}$ und einen Faktor von 0.5 zusätzlich. 
+Die Fenster haben extra eine Fläche von 22.7$m^2$ und einen Wärmedurchgangskoeffizienten von $2.2$. 
+
+Es soll ermittelt werden wie viel Wärmeenergie in $\frac{W}{K}$ im Haus verloren geht, was durch die Fläche multipliziert mit dem Wärmedurchgangskoeffizienten beschrieben werden kann. 
+Häufig ist noch ein weiterer Faktor angegeben welcher miteinberechnet wird.
+
+Der Verlust durch die einzelnen Teile des Hauses werden also mit der Formel $A * U * f$ angegeben. Der Gesamtverlust entspricht der Summe dieser Teile.
+$$Decke = 132 * 1.1 \approx 145.2$$
+$$Fussboden = 132 * 1.1 * 0.5 \approx 72.6$$
+$$Aussenwand = 128 * 0.7 \approx 93.4$$
+$$Fenster = 22.7 * 2.2 \approx 49.9$$
+$$Haus = Decke + Fussboden + Aussenwand + Fenster$$
+$$Haus = 145.2 + 72.6 + 93.4 + 49.9 = 361.1\frac{W}{K}$$
+
+\subsection{Normbemessungstemperaturen}
+Normbemessungstemperaturen sind Temperaturen welche immer eindeutig bestimmt sind. Zu diesen zählt zum Beispiel die Raumtemperatur mit 20$^\circ$ Grad.
+
+\subsubsection{Bsp.: Heizleistung}
+Die Heizleistung kann durch die Leistung in Watt pro Kelvin multipliziert mit der Temperaturänderung angegeben werden.
+Als Beispiel nehme man eine Außentemperatur von -18$^\circ$ Grad Celsius. Diese ist 38 Kelvin von der Raumtemperatur entfernt d. h. $\Delta$T = 38K.
+Die Heizleistung bei einer Leistung von 3611$\frac{W}{K}$ beträgt damit 13.7kW.
+
+\subsection{Wärmeübertragung durch Strahlung}
+Körper strahlen abhängig von ihrer Temperatur, sowie ihrer Wellenlänge unterschiedlich viel Energie aus.
+\subsubsection{Wien'sches Verschiebungsgesetz}
+$$\lambda_{max} * T = k \text{in Km}$$
+\subsubsection{Bsp.: Sonnenstrahlung}
+Das Maximale Emissionsvermögen der Sonne bei einer Wellenlänge von 480nm mit einer Konstanten k von $2.9 * 10^{-3}Km$ soll mit den Wien'schen Verschiebungsgesetz berechnet werden.
+Dafür muss die Wellenlänge in Meter umgerechnet werden, wobei man auf $48 * 10^{-8}$ kommt.
+$$\lambda_{max} = \frac{k}{T} = \frac{2.9 * 10^{-3}}{48 * 10^{-8}} = \frac{29 * 10^4}{48} \approx 6048K$$
+
+\subsubsection{Stefan Boltzmann Gesetz}
+$$Waermestrom = \frac{P}{A} = \sigma * T^4$$
+$\sigma$ ... Stefan-Boltzmann-Konstante = $5.7 * 10^{-8}\frac{W}{m^2 K^4}$
+\\\\
+Aus diesem Gesetz kann man ableiten, dass ein Faktor 2 bei der Temperatur einem Faktor 16 zur Abstrahlung entspricht.
+
+\subsubsection{Bsp.: Glühbirnen}
+Es soll bestimmt werden wie viel Watt eine Glühbirne bei einer Temperatur von 3000K abstrahlt.
+Die Fläche des Wolfrahmdrahtes entspricht dabei ca. 0.5$cm^2$.
+
+Die Werte können direkt in das zuvor erwähnte Gesetz eingesetzt werden.
+$$\frac{P}{A} = \sigma * T^4$$
+$$\frac{P}{5 * 10^{-5}} = \sigma * 3000^4$$
+$$P = \sigma * 5 * 3000^4 * 10^{-5} \approx 46.2 * 10^{-8}W = 46.2nW$$
+
+\section{Umwandlung von Wärmeenergie in mechanische Energie}
+Wärmekraftmaschienen wandeln Wärmeenergie in mechanische Energie um.
+
+\subsection{Cornot'scher Wirkungsgrad}
+$$\eta_C = \frac{T_{Oben} - T_{Unten}}{T_{Oben}}$$
+
+\section{Feuchte Luft}
+\subsection{Absolute Luftfeuchtigkeit}
+Ist die masse des in der Luft enthaltenen Wasserdampfes zum Luftvolumen $\frac{m}{V}$ in $\frac{g_{Wasser}}{kg_{Luft}}$.
+\subsection{Relative Luftfeuchtigkeit}
+Ist die Absolute Luftfeuchtigkeit dividiert durch die Maximale Luftfeuchtigkeit.
+\subsection{Bsp.: Lufterwärmung}
+Die relative Luftfeuchtigkeit in einem Raum mit $4m * 3m * 3m$ beträgt 40\% bei 24$^\circ$ Grad Celsius. Außerhalb beträgt die Temperatur 0$^\circ$ Grad und die Luftfeuchtigkeit beträgt 10\%.
+
+Die halbe Luftmenge soll getauscht werden. Um mit der Berechnung fortzufahren benötigt man einige Werte aus dem Mollier-Diagramm\footnote{Zu finden unter: \href{https://de.wikipedia.org/wiki/Mollier-h-x-Diagramm}{https://de.wikipedia.org/wiki/Mollier-h-x-Diagramm}}.
+Anhand des Linienverlaufs kann man erkennen, dass der Mischpunkt der beiden 13$^\circ$ Grad Celsius bei 45\% Luftfeuchtigkeit beträgt. Zusätzlich kann eine Absolute Luftfeuchtigkeit von 4$\frac{g}{kg}$ bestimmt werden.
+
+Die Mischluft nun auf 20$^\circ$ Grad erhöht werden, was laut Diagramm zu eine Luftfeuchtigkeit von 25\% führt. Erwünscht wäre jedoch eine Luftfeuchtigkeit von 50\% und eine absolute Luftfeuchtigkeit von 7.5$\frac{g}{kg}$.
+Dazu muss eine bestimmte Menge an Wasser zugeführt werden.
+
+Die Masse des Wassers ist in der Formel zur absoluten Luftfeuchtigkeit enthalten. Das Beispiel ändert die absolute Luftfeuchtigkeit von 4 auf 7.5$\frac{g}{kg}$ also um 3.5$\frac{g}{kg}$. 
+Das Volumen der Luft beträgt wie zu Beginn erwähnt $4m * 3m * 3m$ also $36m^3$. Nun kann in die Formel eingesetzt werden.
+$$3.5\frac{g}{kg} = \frac{m g}{36m^3}$$
+
+\section{Anomalie des Wassers}
+\subsection{1. Anomalie}
+Infolge der sperrigen Kristallstruktur dehnt sich Wasser beim erstarren aus und die Dichte sinkt.
+\subsection{2. Anomalie}
+Beim Abkühlen von Wasser setzt die Bildung der 6-Ecke aus, weshalb Wasser bei 4$^\circ$ Grad die höchste Dichte hat.
+
+\section{Wirkungsgrad von Benzin und Diesel}
+\begin{tabular}{l c c c c}
+ & $T_{Arbeit}$ & $T_{Abgas}$ & $\eta_C$ & $\eta_{Real}$\\
+ Otto (Benzin) & 2600K & 970K & 0.63 & 0.2 - 0.33\\
+ Diesel & 2900K & 770K & 0.73 & 0.25 - 0.4
+\end{tabular}
+
+
+\end{document}
